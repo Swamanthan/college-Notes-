@@ -1,0 +1,458 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Pacifico&display=swap');
+
+
+
+
+  *{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+    /* background: url('images/pic.jpg'); */
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+/*   
+background-image: linear-gradient(160deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); */
+background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+
+
+
+    font-family: acumin-pro, system-ui, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: 14px;
+    /* background-color: white; */
+    align-items: start;
+   
+   
+    
+}
+/* body {
+   
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    align-items: start;
+    min-height: 100vh;
+  } */
+header{
+    /* background: #036fb759; */
+    /* background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #c3fcdb 100%);
+
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.1);
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-family: 'Allison', cursive;
+    font-family: 'Pacifico', cursive;
+    font-weight: bolder;
+    font-size: 25px;
+    color:black;
+
+}
+header .logo:hover{
+    background: #333;
+    color: cyan;
+}
+header .navbaar ul{
+    list-style: none;
+
+}
+header .navbaar ul li{
+    position: relative;
+    float: left;
+}
+header .navbaar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+    display: block;
+
+}
+header .navbaar ul li a:hover{
+    background: #333;
+    color: rgb(0, 247, 255);
+}
+header .navbaar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background:rgb(135, 222, 200);
+    display: none;
+
+}
+header .navbaar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0,.1);
+}
+header .navbaar ul li ul li ul{
+    left:200px;
+    top: 0;
+}
+header .navbaar ul li:focus-within > ul,
+header .navbaar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+
+}
+
+
+
+
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    header{
+        padding:20px;
+
+    }
+
+header label{
+    display: initial;
+
+
+
+}
+header .navbaar{
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background:rgba(0, 0, 255, 0.87);
+    border-top: 1px solid rgba(0, 0, 0,.1);
+    display: none;
+
+
+}
+header .navbaar ul li{
+    width: 100%;
+}
+header .navbaar ul li ul{
+    position: relative;
+    width: 100%;
+}
+header .navbaar ul li ul li{
+    background: rgb(0, 30, 128);
+
+}
+header .navbaar ul li ul li ul{
+    width: 100%;left: 0;
+}
+
+
+#menu-bar:checked ~ .navbaar{
+    display: initial;
+}
+
+}
+
+/* slider code start here  */
+.main{
+    font-size: 2.1rem;
+    line-height: 1.4;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-top: 150px;
+
+    width: 40%;
+    height: 30%;
+    direction:ltr;
+   
+
+    position: relative;
+    /* z-index: 7000; */
+}
+
+
+@media screen and (max-width:630px){
+    .main {
+        font-size: 1.5rem;
+        color: rgb(218, 34, 64);
+        margin-bottom: 20px;
+    }
+}
+.maindiv{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-30%);
+    background-image: url(images/IMG_1.3.jpg);
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px white;
+    animation: slider 40s infinite linear;
+}
+@keyframes slider {
+    0%{
+        background-image: url(images/IMG_1.2.jpg);
+    }
+    30%{
+        background-image: url(images/IMG_1.3.jpg);
+    }
+    60%{
+        background-image: url(images/IMG_1.4.jpg);
+    }
+    85%{
+        background-image: url(images/IMG_1.1.jpg);
+    }
+    
+}
+#head{
+    font-family: 'Allison', cursive;
+font-family: 'Pacifico', cursive;
+    text-align: center;
+    position:relative ;
+    bottom: 10px;
+    color:black;
+    font-size: 50px;
+    margin-top: 500px;
+
+}
+/* grid work */
+ .container{
+    position: relative;
+    width: 1200px;
+    height: 250px;
+    /* margin: 240px auto; */
+     margin-bottom: 100px;
+    margin-left: 100px;
+
+    
+    
+}
+.container .box{
+    position:relative;
+    width: calc(350px - 30px);
+    height: calc(350px - 30px);
+    background: #fff;
+    float: left;
+     margin: 15px;  
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container .box:nth-child(1){
+    background: linear-gradient(45deg,#036eb7,#64eaff);
+
+}
+.container .box:nth-child(2){
+    background: linear-gradient(45deg,#E91E63,#ed55ff);
+
+}
+.container .box:nth-child(3){
+    background: linear-gradient(45deg,#086d35,#00ff72);
+
+}
+.container .box  h2{
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 100px;
+    color: #fff;
+    z-index: 1;
+    opacity: 0.4;
+}
+.container .box  h3{
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+   
+}
+.container .box  p{
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+/* foteer  */
+
+
+footer{
+  width: 100%;
+  /* height: 100px; */
+
+  bottom: 0;
+  left: 0; 
+  background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+footer .article{
+  max-width: 1350px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .article p,a{
+  color: black;
+}
+footer .article .box{
+  width: 33%;
+  transition: all 0.4s ease;
+}
+footer .article .topic{
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 16px;
+
+}
+footer .article p{
+  text-align: justify;
+}
+footer .article .lower .topic{
+  margin: 24px 0 5px 0;
+}
+footer .article .lower i{
+  padding-right: 16px;
+}
+footer .article .middle{
+  padding-left: 80px;
+}
+footer .article .middle a{
+  line-height: 32px;
+}
+footer .article .right input[type="text"]{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  color: black;
+  background: #000;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 17px;
+  border: 2px solid #222222;
+}
+footer .article .right input[type="submit"]{
+  height: 42px;
+  width: 100%;
+  font-size: 18px;
+  color: black;
+  background: #eb2f06;
+  outline: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 12px;
+  border: 2px solid #eb2f06;
+  transition: all 0.3s ease-in-out;
+}
+.article .right input[type="submit"]:hover{
+  background: none;
+  color:  #eb2f06;
+}
+footer .article .media-icons a{
+  font-size: 16px;
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 30px 5px 0 0;
+  transition: all 0.3s ease;
+}
+.article .media-icons a:hover{
+  border-color: #eb2f06;
+}
+footer .bottom{
+  width: 100%;
+  text-align: right;
+  color: black;
+  padding: 0 40px 5px 0;
+}
+footer .bottom a{
+  color: #eb2f06;
+}
+footer a{
+  transition: all 0.3s ease;
+}
+footer a:hover{
+  color: #eb2f06;
+}
+@media (max-width:1100px) {
+  footer .article .middle{
+    padding-left: 50px;
+  }
+}
+@media (max-width:950px){
+  footer .article .box{
+    width: 50%;
+  }
+  .article .right{
+    margin-top: 40px;
+  }
+}
+@media (max-width:560px){
+  footer{
+    position: relative;
+  }
+  footer .article .box{
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .article .middle{
+    padding-left: 0;
+  }
+}
